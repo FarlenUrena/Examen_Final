@@ -33,7 +33,7 @@ import lombok.ToString;
  */
 
 @Entity
-@Table(name = "exa_far_cobros_pendientes")
+@Table(name = "exa_fun_cobros_pendientes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,9 +44,9 @@ public class CobroPendiente implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @ManyToOne
-    @JoinColumn(name = "membresias_id")
-    private Membresia membresia;
+//    @ManyToOne
+//    @JoinColumn(name = "membresias_id")
+//    private Membresia membresia;
     
     @Column(name = "monto")
     private double monto;

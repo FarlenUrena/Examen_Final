@@ -33,7 +33,7 @@ import lombok.ToString;
  * @author farle_000
  */
 @Entity
-@Table(name = "exa_far_tipos_servicios")
+@Table(name = "exa_fun_tipos_servicios")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,8 +44,8 @@ public class TipoServicio implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoServicio") 
-    private List<Membresia> membresias= new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoServicio") 
+//    private List<Membresia> membresias= new ArrayList<>();
     
     @Column(name = "descripcion")
     private String descripción;

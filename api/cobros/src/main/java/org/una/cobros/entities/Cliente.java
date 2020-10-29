@@ -36,7 +36,7 @@ import lombok.ToString;
  */
 
 @Entity
-@Table(name = "exa_far_clientes")
+@Table(name = "exa_fun_clientes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -47,8 +47,8 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente") 
-    private List<Membresia> membresias= new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente") 
+//    private List<Membresia> membresias= new ArrayList<>();
 
     @Column(name = "nombre_completo", length = 50)
     private String nombreCompleto;
