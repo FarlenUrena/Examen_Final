@@ -44,9 +44,9 @@ public class CobroPendiente implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-//    @ManyToOne
-//    @JoinColumn(name = "membresias_id")
-//    private Membresia membresia;
+    @ManyToOne
+    @JoinColumn(name = "exa_fun_membresias_id")
+    private Membresia membresia;
     
     @Column(name = "monto")
     private double monto;

@@ -44,8 +44,8 @@ public class TipoServicio implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoServicio") 
-//    private List<Membresia> membresias= new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "exa_fun_membresia") 
+    private List<Membresia> membresias= new ArrayList<>();
     
     @Column(name = "descripcion")
     private String descripción;

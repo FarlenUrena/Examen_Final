@@ -47,8 +47,8 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente") 
-//    private List<Membresia> membresias= new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "exa_fun_cliente") 
+    private List<Membresia> membresias= new ArrayList<>();
 
     @Column(name = "nombre_completo", length = 50)
     private String nombreCompleto;

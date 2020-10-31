@@ -47,16 +47,16 @@ public class Membresia implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-//    @ManyToOne
-//    @JoinColumn(name = "clientes_id")
-//    private Cliente cliente;
-//    
-//    @ManyToOne
-//    @JoinColumn(name = "tipos_servicios_id")
-//    private TipoServicio tipoServicio;
-//    
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "membresia") 
-//    private List<CobroPendiente> cobrosPendientes= new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "exa_fun_clientes_id")
+    private Cliente cliente;
+    
+    @ManyToOne
+    @JoinColumn(name = "exa_fun_tipos_servicios_id")
+    private TipoServicio tipoServicio;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "exa_fun_membresia") 
+    private List<CobroPendiente> cobrosPendientes= new ArrayList<>();
     
     @Column(name = "total_año")
     private int totalAño;
